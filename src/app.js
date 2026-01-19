@@ -28,7 +28,7 @@ if (require.main === module) {
   });
 }
 
-// module.exports = app;
+module.exports = app;
 // // ...existing code...
 // const express = require('express');
 // const app = express();
