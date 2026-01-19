@@ -1,0 +1,98 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files (secrets)
+.env
+.env.*.local
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# Build / coverage
+dist/
+build/
+coverage/
+.nyc_output/
+.cache/
+.parcel-cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# IDE / editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.iml
+
+# Misc
+tmp/
+temp/
+*.pid
+*.seed
+*.tgz
+```// filepath: /Users/snehasaurabh/Desktop/Saurabh/DevOps/Abb's/hello-abb/.gitignore
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files (secrets)
+.env
+.env.*.local
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# Build / coverage
+dist/
+build/
+coverage/
+.nyc_output/
+.cache/
+.parcel-cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# IDE / editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.iml
+
+# Misc
+tmp/
+temp/
+*.pid
+*.seed
