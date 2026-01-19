@@ -1,10 +1,10 @@
-// ...existing code...
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
+const message = process.env.APP_MESSAGE || 'Hello ABB';
 
 app.get('/', (req, res) => {
-  res.send('Hello ABB');
+  res.send(message);
 });
 
 // Liveness and readiness endpoints for Kubernetes probes
