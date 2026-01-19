@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
     needs: build
     permissions:
       id-token: write
-      contents: read
+      contents: write
 
     steps:
       - name: Checkout repo
@@ -62,3 +62,4 @@ jobs:
                git push origin ${{ inputs.image_tag }}
              fi
              docker push ${{ secrets.ACR_NAME }}.azurecr.io/hello-abb:${{ inputs.image_tag }}
+
