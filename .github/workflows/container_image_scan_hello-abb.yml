@@ -1,4 +1,4 @@
-name: Build, push image to ACR and deploy Node.js app - hello-abb
+name: Build, SCAN image to before pushing to ACR
 
 on:
   workflow_dispatch:
