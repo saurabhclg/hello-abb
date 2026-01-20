@@ -1,4 +1,4 @@
-name: Build, push image to ACR and deploy Node.js app - hello-abb
+name: env_variable_demo
 
 on:
   workflow_dispatch:
