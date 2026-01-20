@@ -10,7 +10,7 @@ on:
 
 # Non-sensitive environment variable
 env:
-  ACR_NAME: devopsabbacrab
+  ACR_NAME: devopsabbacr
 
 jobs:
   build:
@@ -63,14 +63,3 @@ jobs:
         run: |
           az acr login --name ${{ env.ACR_NAME }}
 
-      # ---- Build, tag and push image (UNCHANGED LOGIC) ----
-      - name: Build and push Docker image
-        run: |
-          docker build -f Dockerfile -t ${{ env.ACR_NAME }}.azurecr.io/hello-abb:${{ inputs.image_tag }} .
-          
-          if [ "${{ inputs.image_tag }}" != "latest" ]; then
-            git tag ${{ inputs.image_tag }}
-            git push origin ${{ inputs.image_tag }}
-          fi
-          
-          docker push ${{ env.ACR_NAME }}.azurecr.io/hello-abb:${{ inputs.image_tag }}
