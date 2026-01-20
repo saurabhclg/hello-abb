@@ -10,7 +10,7 @@ on:
 
 # Non-sensitive environment variable
 env:
-  ACR_NAME: devopsabbacr
+  ACR_NAME: devopsabbacrab
 
 jobs:
   build:
@@ -59,7 +59,12 @@ jobs:
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_76E486F57F2446C9A01B7CC26D247A40 }}
 
       # ---- Login to ACR (ACR_NAME via env) ----
-      - name: Login to Azure Container Registry
-        run: |
-          az acr login --name ${{ env.ACR_NAME }}
+
+      - name: Login to ACR and Push
+        uses: azure/docker-login@v1
+        with:
+          login-server: ${{ env.ACR_NAME }}.azurecr.io
+          username: ${{ secrets.ACR_USERNAME_CI }}
+          password: ${{ secrets.ACR_PASSWORD_CS }}
+      
 
