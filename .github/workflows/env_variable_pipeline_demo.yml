@@ -66,5 +66,12 @@ jobs:
           login-server: ${{ env.ACR_NAME }}.azurecr.io
           username: ${{ secrets.ACR_USERNAME_CI }}
           password: ${{ secrets.ACR_PASSWORD_CS }}
+
+      - name: Validate ACR login
+        run: |
+            echo "Validating Docker login to ACR..."
+            docker info > /dev/null
+            echo "Docker is authenticated and ready"
+
       
 
