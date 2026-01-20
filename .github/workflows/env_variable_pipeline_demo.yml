@@ -10,7 +10,7 @@ on:
 
 # Non-sensitive environment variable
 env:
-  ACR_NAME: devopsabbacrab
+  ACR_NAME: devopsabbacrab.do
 
 jobs:
   build:
